@@ -34,9 +34,7 @@ To connect to the VM:
 ssh -i id_rsa vmclient@<public-ip>
 ```
 
-## Network troubleshooting
-
-### Public instance
+## Public Access
 
 This section will test different settings for the Public access.
 
@@ -71,9 +69,9 @@ This will not work:
 <img src=".assets/public-006.png" />
 
 
-### Private instance
+## Private Access (VNET)
 
-With the private PostgreSQL instance, we have more security.
+With the private PostgreSQL instance, we have extra security.
 
 The first noticeable change is that the DNS will respond to a private IP, thanks to the Private DNS Zone integration link:
 
