@@ -16,6 +16,14 @@ resource vnet 'Microsoft.Network/virtualNetworks@2022-07-01' = {
         properties: {
           addressPrefix: '10.0.90.0/24'
           privateEndpointNetworkPolicies: 'Disabled'
+          delegations: [
+            {
+              name: 'postgresFlex'
+              properties: {
+                serviceName: 'Microsoft.DBforPostgreSQL/flexibleServers'
+              }
+            }
+          ]
           networkSecurityGroup: {
             id: pgsqlNSG.id
           }

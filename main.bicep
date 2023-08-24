@@ -17,13 +17,13 @@ module dnsZone './dnszone.bicep' = {
   }
 }
 
-module postgres './postgres.bicep' = {
-  name: 'postgresDeployment'
-  params: {
-    location: location
-    administratorLogin: config.administratorLogin
-    administratorLoginPassword: config.administratorLoginPassword
-    subnetId: network.outputs.pgsqlSubnetId
-    privateDnsZoneArmResourceId: dnsZone.outputs.postgresPrivateDnsZoneId
-  }
-}
+// module postgres './postgres.bicep' = {
+//   name: 'postgresDeployment'
+//   params: {
+//     location: location
+//     administratorLogin: config.administratorLogin
+//     administratorLoginPassword: config.administratorLoginPassword
+//     subnetId: network.outputs.pgsqlSubnetId
+//     privateDnsZoneArmResourceId: dnsZone.outputs.postgresPrivateDnsZoneId
+//   }
+// }
