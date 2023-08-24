@@ -14,7 +14,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       {
         name: 'subnet-pgsql-001'
         properties: {
-          addressPrefix: '10.0.20.0/24'
+          addressPrefix: '10.0.90.0/24'
           privateEndpointNetworkPolicies: 'Disabled'
           networkSecurityGroup: {
             id: pgsqlNSG.id
@@ -24,7 +24,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       {
         name: 'subnet-vm-001'
         properties: {
-          addressPrefix: '10.0.90.0/24'
+          addressPrefix: '10.0.20.0/24'
           privateEndpointNetworkPolicies: 'Disabled'
           networkSecurityGroup: {
             id: vmNSG.id

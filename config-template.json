@@ -1,8 +1,4 @@
 {
-  "login": "powerapps",
-  "password": "",
-  "firewall": {
-    "endIpAddress": "255.255.255.255",
-    "startIpAddress": "0.0.0.0"
-  }
+  "administratorLogin": "admin",
+  "administratorLoginPassword": "P@ssw0rd.123"
 }
