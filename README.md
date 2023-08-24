@@ -38,11 +38,15 @@ ssh -i id_rsa vmclient@<public-ip>
 
 ### Public instance
 
-In this setup, the initial configuration is Public access, but no origin is allowed:
+This section will test different settings for the Public access.
+
+As a baseline configuration for this workload, no origin is allowed:
 
 <img src=".assets/public-001.png" width=700 />
 
 As expected, all access is blocked, including from the VNET:
+
+> 💡 Notice that the resolved IP is public, as expected
 
 <img src=".assets/public-002.png" />
 
@@ -69,8 +73,21 @@ This will not work:
 
 ### Private instance
 
+With the private PostgreSQL instance, we have more security.
 
+The first noticeable change is that the DNS will respond to a private IP, thanks to the Private DNS Zone integration link:
 
+<img src=".assets/private-001.png" />
+
+From the VM subnet, it is possible to connect privately.
+
+```sh
+psql -h psql-private-wlmzbaxrqurda.postgres.database.azure.com -p 5432 -U pgadmin -d postgres
+```
+
+Results, as expected:
+
+<img src=".assets/private-002.png" />
 
 ## Documentation
 
