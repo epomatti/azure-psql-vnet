@@ -4,6 +4,10 @@ Demonstrating VNET integration with PostgreSQL Flexible Server.
 
 As of today, Flexible Server currently does not support Private Endpoints.
 
+## Setup
+
+Start by creating a resource group where the resources will be provisioned:
+
 ```sh
 az group create -n rg-myapp -l brazilsouth
 ```
@@ -22,13 +26,13 @@ Generate the keys to connect to the VM:
 ssh-keygen -f ./id_rsa
 ```
 
-Create the resources:
+Invoke ARM using the Bicep recipes:
 
 ```sh
 az deployment group create -g rg-myapp -f main.bicep
 ```
 
-To connect to the VM:
+Once ready, connect to the VM:
 
 ```sh
 ssh -i id_rsa vmclient@<public-ip>
