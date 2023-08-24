@@ -2,7 +2,7 @@
 
 Demonstrating VNET integration with PostgreSQL Flexible Server.
 
-> 🤦‍♂️ PG Flexible Server currently does not support Private Endpoints.
+As of today, Flexible Server currently does not support Private Endpoints.
 
 ```sh
 az group create -n rg-myapp -l brazilsouth
