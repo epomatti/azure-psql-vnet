@@ -50,7 +50,7 @@ As expected, all access is blocked, including from the VNET:
 
 Checking the box to allow Azure services will open the connectivity from the VNET resources.
 
-**However**, it does come with a disclaimer, on which it also includes undesired origins:
+⚠️ **However**, it does come with a disclaimer, on which it also includes undesired origins:
 
 > This option configures the firewall to allow connections from IP addresses allocated to any Azure service or asset, including connections from the subscriptions of other customers.
 
