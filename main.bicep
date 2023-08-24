@@ -38,3 +38,13 @@ module postgresInternet './postgres.bicep' = {
     administratorLoginPassword: config.administratorLoginPassword
   }
 }
+
+module vm './vm.bicep' = {
+  name: 'vmDeployment'
+  params: {
+    location: location
+    subnetId: network.outputs.vmSubnetId
+    username: 'vmclient'
+    password: 'P@ssw0rd.123'
+  }
+}
