@@ -2,7 +2,9 @@
 
 Demonstrating VNET integration with PostgreSQL Flexible Server.
 
-As of today, Flexible Server currently does not support Private Endpoints.
+As of today, Flexible Server does not support Private Endpoints.
+
+<img src=".assets/psql.png" width=800 />
 
 ## Setup
 
